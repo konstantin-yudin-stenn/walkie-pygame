@@ -28,7 +28,7 @@ class GameManager:
         pos = (100, 100)
         new = ''.join(filter(str.isalnum, str(self.field)))
         for index, item in enumerate(new):
-            if index > 0 and index % 10 == 0:
+            if index > 0 and index % self.field_size == 0:
                 pos = (100, pos[1] + 20)
             label = myfont.render(str(item), False, (255, 255, 255))
             self.screen.blit(label, pos)
